@@ -7,7 +7,7 @@
 #See Details: http://creativecommons.org/licenses/by-sa/3.0/
 
 #Paths and Filenames
-savedata=/home/tim/save/*
+savedata=/home/yourusername/save/*
 backupFileExt=.tgz
 backupFile=Backup_$(date +"%F_%H-%M")$backupFileExt
 backupContent=$backupFile.txt
@@ -36,7 +36,7 @@ tar czf $backupFile $savedata;
 archivStatus=$?
 #read content from the archive and it in the txt
 tar tf $backupFile > $backupContent;
-#filesize ermitteln
+#get filesize
 contentFilesize=$(ls -l $backupContent | tr -s " " | cut -d " " -f 5)
 #rar a -s -m5 $backupFile $savedata;
 #if the content filesize not equals 0; then
